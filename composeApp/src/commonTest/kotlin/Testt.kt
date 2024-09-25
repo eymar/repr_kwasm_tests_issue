@@ -9,6 +9,11 @@ class Testt {
     fun test() = runTest {
         throwsJsException()
     }
+
+    @Test
+    fun notAsyncTest() {
+        throwsJsException()
+    }
 }
 
 fun throwsJsException(): JsAny  = js("callUnknownFunction()")
